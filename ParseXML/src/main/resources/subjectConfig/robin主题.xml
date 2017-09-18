@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subjectInfo>
+       <subjectName>伯他主题</subjectName>
+       <subjectDesc>robin desc</subjectDesc>
+       <restFlag>RobinDBSubject</restFlag>
+       <keywords>robin</keywords>
+       <biz>100</biz>
+       <publicOrg>120</publicOrg>
+       <bizObject>com.robin.RobinDBSubject</bizObject>
+       <dataSourceName>dblhzh</dataSourceName>
+       <subjectConfig>
+              <inputs>
+                     <colunmName>name</colunmName>
+                     <colunmType>String</colunmType>
+                     <chinaParamName>姓名</chinaParamName>
+                     <desc>姓名</desc>
+                     <isSearchSupported>否</isSearchSupported>
+              </inputs>
+       </subjectConfig>
+</subjectInfo>
