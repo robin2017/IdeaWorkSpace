@@ -1,4 +1,5 @@
 import org.springframework.core.io.Resource;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 /**
  * Copyright : com.robin
@@ -10,15 +11,16 @@ import org.springframework.core.io.Resource;
  */
 
 public class ResourceUtil {
+    private static PathMatchingResourcePatternResolver resolver;
      public static Resource[] getResource(String location) {
-//        Resource[] ress = null;
-//        try {
-//            if (null != resolver) {
-//                ress = resolver.getResources(location);
-//            }
-//        } catch (Exception e) {
-//            System.out.println("failed to getResource");
-//        }
+        Resource[] ress = null;
+        try {
+            if (null != resolver) {
+                ress = resolver.getResources(location);
+            }
+        } catch (Exception e) {
+            System.out.println("failed to getResource");
+        }
 //        if (ArrayUtils.isEmpty(ress)) {
 //            PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
 //            try {
@@ -27,7 +29,7 @@ public class ResourceUtil {
 //                System.out.println("failed to getResource");
 //            }
 //        }
-//        return ress;
-         return null;
+        return ress;
+
      }
 }
