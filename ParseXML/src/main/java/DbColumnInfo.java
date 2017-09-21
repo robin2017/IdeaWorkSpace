@@ -3,45 +3,26 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Copyright : com.robin
- * Author : Robin
- * Date : 2017/9/18
- * Time : 下午9:46
- * Version : 1.0
- * Description : desc
- */
-
 @XStreamAlias("dbColumn")
-public class DbColunmInfo {
-    /**列的名称*/
+public class DbColumnInfo {
     private String columnName;
 
-    /**列的类型*/
     private String columnType;
 
-    /**中文名*/
     private String chinaParamName;
 
-    /**是否集合类型*/
     private boolean repeated = false;
 
-    /**嵌套结构*/
-    private List<DbColunmInfo> dbColunmInfoList = new ArrayList<DbColunmInfo>();
+    private List<DbColumnInfo> dbColumnInfoList = new ArrayList<DbColumnInfo>();
 
-    /**列说明*/
     private String desc;
 
-    /**是否为主键*/
     private String isPrimaryKey;
 
-    /**是否支持搜索*/
     private String isSearchSupported;
 
-    /**是否支持排序*/
     private String isSortedSupported;
 
-    /**是否搜索显示*/
     private String isSearchDisplay;
 
     public String getColumnName() {
@@ -76,12 +57,12 @@ public class DbColunmInfo {
         this.repeated = repeated;
     }
 
-    public List<DbColunmInfo> getDbColunmInfoList() {
-        return dbColunmInfoList;
+    public List<DbColumnInfo> getDbColumnInfoList() {
+        return dbColumnInfoList;
     }
 
-    public void setDbColunmInfoList(List<DbColunmInfo> dbColunmInfoList) {
-        this.dbColunmInfoList = dbColunmInfoList;
+    public void setDbColumnInfoList(List<DbColumnInfo> dbColumnInfoList) {
+        this.dbColumnInfoList = dbColumnInfoList;
     }
 
     public String getDesc() {
@@ -122,5 +103,21 @@ public class DbColunmInfo {
 
     public void setIsSearchDisplay(String isSearchDisplay) {
         this.isSearchDisplay = isSearchDisplay;
+    }
+
+    @Override
+    public String toString() {
+        return "DbColumnInfo{" +
+                "columnName='" + columnName + '\'' +
+                ", columnType='" + columnType + '\'' +
+                ", chinaParamName='" + chinaParamName + '\'' +
+                ", repeated=" + repeated +
+                ", dbColumnInfoList=" + dbColumnInfoList +
+                ", desc='" + desc + '\'' +
+                ", isPrimaryKey='" + isPrimaryKey + '\'' +
+                ", isSearchSupported='" + isSearchSupported + '\'' +
+                ", isSortedSupported='" + isSortedSupported + '\'' +
+                ", isSearchDisplay='" + isSearchDisplay + '\'' +
+                '}';
     }
 }

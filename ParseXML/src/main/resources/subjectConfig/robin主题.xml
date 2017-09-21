@@ -10,11 +10,13 @@
        <dataSourceName>dblhzh</dataSourceName>
        <subjectConfig>
               <inputs>
-                     <colunmName>name</colunmName>
-                     <colunmType>String</colunmType>
-                     <chinaParamName>姓名</chinaParamName>
-                     <desc>姓名</desc>
-                     <isSearchSupported>否</isSearchSupported>
+                     <dbColumn>
+                            <columnName>name</columnName>
+                            <columnType>String</columnType>
+                            <chinaParamName>姓名</chinaParamName>
+                            <desc>姓名</desc>
+                            <isSearchSupported>否</isSearchSupported>
+                     </dbColumn>
               </inputs>
        </subjectConfig>
 </subjectInfo>

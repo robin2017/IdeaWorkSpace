@@ -187,4 +187,28 @@ public class SubjectInfo {
     public void setSubjectConfig(SubjectConfig subjectConfig) {
         this.subjectConfig = subjectConfig;
     }
+
+
+    @Override
+    public String toString() {
+        return "SubjectInfo{" +
+                "version='" + version + '\'' +
+                ", security=" + security +
+                ", format=" + format +
+                ", providerDepart='" + providerDepart + '\'' +
+                ", subjectName='" + subjectName + '\'' +
+                ", subjectDesc='" + subjectDesc + '\'' +
+                ", restFlag='" + restFlag + '\'' +
+                ", biz=" + biz +
+                ", publicOrg=" + publicOrg +
+                ", keywords='" + keywords + '\'' +
+                ", bizObject='" + bizObject + '\'' +
+                ", dataSourceName='" + dataSourceName + '\'' +
+                ", timeColumn='" + timeColumn + '\'' +
+                ", dispalyUrl='" + dispalyUrl + '\'' +
+                ", displayUnitUrl='" + displayUnitUrl + '\'' +
+                ", router=" + router +
+                ", subjectConfig=" + subjectConfig +
+                '}';
+    }
 }

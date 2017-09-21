@@ -14,8 +14,8 @@ import java.util.List;
 @XStreamAlias("subjectConfig")
 public class SubjectConfig {
     private BaseSQL baseSQL;
-    private List<DbColunmInfo> inputs = new ArrayList<DbColunmInfo>();
-    private List<DbColunmInfo> outputs = new ArrayList<DbColunmInfo>();
+    private List<DbColumnInfo> inputs = new ArrayList<DbColumnInfo>();
+    private List<DbColumnInfo> outputs = new ArrayList<DbColumnInfo>();
 
     public BaseSQL getBaseSQL() {
         return baseSQL;
@@ -25,19 +25,28 @@ public class SubjectConfig {
         this.baseSQL = baseSQL;
     }
 
-    public List<DbColunmInfo> getInputs() {
+    public List<DbColumnInfo> getInputs() {
         return inputs;
     }
 
-    public void setInputs(List<DbColunmInfo> inputs) {
+    public void setInputs(List<DbColumnInfo> inputs) {
         this.inputs = inputs;
     }
 
-    public List<DbColunmInfo> getOutputs() {
+    public List<DbColumnInfo> getOutputs() {
         return outputs;
     }
 
-    public void setOutputs(List<DbColunmInfo> outputs) {
+    public void setOutputs(List<DbColumnInfo> outputs) {
         this.outputs = outputs;
+    }
+
+    @Override
+    public String toString() {
+        return "SubjectConfig{" +
+                "baseSQL=" + baseSQL +
+                ", inputs=" + inputs +
+                ", outputs=" + outputs +
+                '}';
     }
 }
