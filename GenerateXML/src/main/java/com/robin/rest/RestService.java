@@ -9,6 +9,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Copyright : com.robin
@@ -31,9 +33,12 @@ public class RestService {
 //        Student stu2 = new Student("jack",2);
 //        page.add(stu1);
 //        page.add(stu2);
+        List<Page> list = new ArrayList<Page>();
+
+//        list.add(page);  //添加就失败了
 
         DataSet<Page> dataSet = new DataSet<Page>();
-        dataSet.setDatalist(page);
+        dataSet.setDatalist(list);
 
         resourceData.setDataset(dataSet);
         resourceData.setId(1);

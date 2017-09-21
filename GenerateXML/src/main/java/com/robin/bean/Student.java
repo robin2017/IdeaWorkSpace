@@ -1,6 +1,7 @@
 package com.robin.bean;
 
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 
 /**
  * Copyright : com.robin
@@ -12,7 +13,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 
 @XmlRootElement(name = "data")
-public class Student {
+public class Student implements Serializable{
     private String name;
     private int age;
 
