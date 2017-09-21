@@ -1,5 +1,7 @@
 package com.robin.rest;
 
+import com.github.pagehelper.Page;
+import com.robin.bean.DataSet;
 import com.robin.bean.ResourceData;
 
 import javax.ws.rs.GET;
@@ -23,6 +25,18 @@ public class RestService {
     @Produces({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON,"application/x-protobuf"})
     public ResourceData query(@PathParam("serviceFlag") String serviceFlag){
         ResourceData resourceData = new ResourceData();
+
+        Page page = new Page(1,10);
+//        Student stu1 = new Student("robin",1);
+//        Student stu2 = new Student("jack",2);
+//        page.add(stu1);
+//        page.add(stu2);
+
+        DataSet<Page> dataSet = new DataSet<Page>();
+        dataSet.setDatalist(page);
+
+        resourceData.setDataset(dataSet);
+        resourceData.setId(1);
         return resourceData;
     }
 }

@@ -2,6 +2,8 @@ package com.robin.bean;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,8 +18,10 @@ import java.util.List;
 
 @XmlAccessorType(XmlAccessType.NONE)
 public class DataSet<T> {
+    @XmlAttribute(name = "totalCount")
     private long totalCount = 0;
 
+    @XmlElement(name = "data")
     private List<T> datalist = new ArrayList<T>();
 
     public void addData(T seat) {
